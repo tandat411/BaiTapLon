@@ -1,6 +1,6 @@
 ﻿namespace QLSV
 {
-    partial class Form1
+    partial class DangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD:DangNhap.Designer.cs
+            // DangNhap
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(409, 344);
+            this.Name = "DangNhap";
+            this.Text = "Đăng nhập";
+=======
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,6 +124,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+>>>>>>> 69ed779a63ff45ec05b332a3ee122ccb7029ab8e:Form1.Designer.cs
             this.ResumeLayout(false);
             this.PerformLayout();
 

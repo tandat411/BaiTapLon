@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QLSV
 {
-    public partial class Form1 : Form
+    public partial class DangNhap : Form
     {
-        public Form1()
+        public DangNhap()
         {
             InitializeComponent();
         }
