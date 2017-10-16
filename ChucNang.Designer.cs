@@ -223,6 +223,7 @@
             this.btXemDiem.TabIndex = 2;
             this.btXemDiem.Text = "Xem điểm thi";
             this.btXemDiem.UseVisualStyleBackColor = true;
+            this.btXemDiem.Click += new System.EventHandler(this.btXemDiem_Click);
             // 
             // btXemLichThi
             // 

@@ -68,5 +68,12 @@ namespace QLSV
             cmd8.CommandType = CommandType.Text;
             txtNienKhoa.Text = Convert.ToString(cmd8.ExecuteScalar());
         }
+
+        private void btXemDiem_Click(object sender, EventArgs e)
+        {
+            Xemdiem f = new Xemdiem();
+            
+            f.Show();
+        }
     }
 }
