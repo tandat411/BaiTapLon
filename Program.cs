@@ -15,7 +15,12 @@ namespace QLSV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Welcome());
+            Welcome welcome = new Welcome();
+            Application.Run(welcome);
+            if (welcome.IsDisposed)
+            {
+                Application.Run(new DangNhap());
+            }
         }
     }
 }

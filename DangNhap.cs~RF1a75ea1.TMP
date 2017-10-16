@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace QLSV
+{
+    public partial class DangNhap : Form
+    {
+        public DangNhap()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
+        SqlConnection cn = null;
+        public static string mssv;
+        private void btDangNhap_Click(object sender, EventArgs e)
+        {
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\QLSV\App_data\QLSinhVien.mdf;Integrated Security=True;Connect Timeout=30");
+            cn.Open();
+            string sql = "SELECT ID FROM TaiKhoan WHERE ID = '" + txtMSSV.Text + "' and Pass = '" + txtMatKhau.Text + "'";
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = CommandType.Text;
+            string i = null;
+            i = (string)cmd.ExecuteScalar();
+            if (i != null)
+            {
+                MessageBox.Show("Đăng nhập thành công");
+                this.Hide();
+                if (this.IsDisposed);
+                {
+                    ChucNang dvsv = new ChucNang();
+                    dvsv.Show();
+                }
+            }
+            else
+                MessageBox.Show("Đăng nhập thất bại");
+            
+        }
+    }
+}
