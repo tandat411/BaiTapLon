@@ -21,6 +21,7 @@ namespace QLSV
         {
             if (MessageBox.Show("Bạn muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 e.Cancel = true;
+            DangNhap.cn.Close();
         }
 
         private void ChucNang_Load(object sender, EventArgs e)
@@ -67,6 +68,12 @@ namespace QLSV
             SqlCommand cmd8 = new SqlCommand(sqlNienKhoa, DangNhap.cn);
             cmd8.CommandType = CommandType.Text;
             txtNienKhoa.Text = Convert.ToString(cmd8.ExecuteScalar());
+        }
+
+        private void btXemTKB_Click(object sender, EventArgs e)
+        {
+            ThoiKhoaBieu tkb = new ThoiKhoaBieu();
+            tkb.Show();
         }
     }
 }

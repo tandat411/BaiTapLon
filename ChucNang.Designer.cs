@@ -213,6 +213,7 @@
             this.btXemTKB.TabIndex = 2;
             this.btXemTKB.Text = "Xem thời khóa biểu";
             this.btXemTKB.UseVisualStyleBackColor = true;
+            this.btXemTKB.Click += new System.EventHandler(this.btXemTKB_Click);
             // 
             // btXemDiem
             // 
