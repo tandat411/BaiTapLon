@@ -86,6 +86,12 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xemdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xemdiem.Designer.cs">
+      <DependentUpon>Xemdiem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChucNang.resx">
       <DependentUpon>ChucNang.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,12 +106,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ThoiKhoaBieu.resx">
       <DependentUpon>ThoiKhoaBieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xemdiem.resx">
+      <DependentUpon>Xemdiem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -139,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SABWm9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -68,6 +68,13 @@ namespace QLSV
             SqlCommand cmd8 = new SqlCommand(sqlNienKhoa, DangNhap.cn);
             cmd8.CommandType = CommandType.Text;
             txtNienKhoa.Text = Convert.ToString(cmd8.ExecuteScalar());
+            DangNhap.cn.Close();
+        }
+
+        private void btXemDiem_Click(object sender, EventArgs e)
+        {
+            Xemdiem f = new Xemdiem();
+            f.Show();
         }
 
         private void btXemTKB_Click(object sender, EventArgs e)
