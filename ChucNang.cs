@@ -21,7 +21,6 @@ namespace QLSV
         {
             if (MessageBox.Show("Bạn muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 e.Cancel = true;
-            DangNhap.cn.Close();
         }
 
         private void ChucNang_Load(object sender, EventArgs e)
@@ -59,7 +58,7 @@ namespace QLSV
             cmd6.CommandType = CommandType.Text;
             txtSDT.Text = Convert.ToString(cmd6.ExecuteScalar());
             //Khoa
-            string sqlKhoa = "SELECT  TenKhoa FROM SinhVien,Khoa WHERE MaSinhVien ='" + DangNhap.mssv + "' and SinhVien.MaKhoa = Khoa.MaKhoa";
+            string sqlKhoa = "SELECT Khoa.TenKhoa FROM SinhVien, Khoa WHERE MaSinhVien ='" + DangNhap.mssv + "' and SinhVien.MaKhoa = Khoa.MaKhoa";
             SqlCommand cmd7 = new SqlCommand(sqlKhoa, DangNhap.cn);
             cmd7.CommandType = CommandType.Text;
             txtKhoa.Text = Convert.ToString(cmd7.ExecuteScalar());
@@ -68,19 +67,19 @@ namespace QLSV
             SqlCommand cmd8 = new SqlCommand(sqlNienKhoa, DangNhap.cn);
             cmd8.CommandType = CommandType.Text;
             txtNienKhoa.Text = Convert.ToString(cmd8.ExecuteScalar());
-            DangNhap.cn.Close();
         }
 
         private void btXemDiem_Click(object sender, EventArgs e)
         {
             Xemdiem f = new Xemdiem();
+            
             f.Show();
         }
 
-        private void btXemTKB_Click(object sender, EventArgs e)
+        private void btDangKy_Click(object sender, EventArgs e)
         {
-            ThoiKhoaBieu tkb = new ThoiKhoaBieu();
-            tkb.Show();
+            DKMH dk = new DKMH();
+            dk.Show();
         }
     }
 }
