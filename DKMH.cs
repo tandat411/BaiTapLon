@@ -13,6 +13,7 @@ namespace QLSV
 {
     public partial class DKMH : Form
     {
+        int a = 0;
         SqlConnection cn = null;
         SqlCommand cmd = null;
         private int value = 0; //Biến đếm số lượng sinh viên đã đăng ký (tối đa là 4)
